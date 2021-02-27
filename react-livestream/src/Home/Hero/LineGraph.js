@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Line } from "react-chartjs-2";
-import "./LineGraph.css";
+import React, { useState, useEffect } from 'react';
+import { Line } from 'react-chartjs-2';
+import './LineGraph.css';
 
 function LineGraph() {
   const [graphData, setGraphData] = useState([]);
@@ -12,7 +12,9 @@ function LineGraph() {
       let date = new Date();
       date.setHours(0, 0, 0, 0);
       date.setDate(i);
-      value += Math.round((Math.random() < 0.5 ? 10 : -10) * Math.random() * 10);
+      value += Math.round(
+        (Math.random() < 0.5 ? 10 : -10) * Math.random() * 10
+      );
       data.push({ x: date, y: value });
     }
     setGraphData(data);
@@ -27,15 +29,15 @@ function LineGraph() {
         data={{
           datasets: [
             {
-              type: "line",
+              type: 'line',
               data: graphData,
-              backgroundColor: "black",
-              borderColor: "#5AC53B",
+              backgroundColor: 'black',
+              borderColor: '#5AC53B',
               borderWidth: 2,
-              pointBorderColor: "rgba(0,0,0,0)",
-              pointBackgroundColor: "rgba(0,0,0,0)",
-              pointHoverBackgroundColor: "#5AC53B",
-              pointHoverBorderColor: "#000000",
+              pointBorderColor: 'rgba(0,0,0,0)',
+              pointBackgroundColor: 'rgba(0,0,0,0)',
+              pointHoverBackgroundColor: '#5AC53B',
+              pointHoverBorderColor: '#000000',
               pointHoverBorderWidth: 4,
               pointHoverRadius: 6,
             },
@@ -47,16 +49,16 @@ function LineGraph() {
             display: false,
           },
           tooltips: {
-            mode: "index",
+            mode: 'index',
             intersect: true,
           },
           scales: {
             xAxes: [
               {
-                type: "time",
+                type: 'time',
                 time: {
-                  format: "MM/DD/YY",
-                  tooltipFormat: "ll",
+                  format: 'MM/DD/YY',
+                  tooltipFormat: 'll',
                 },
                 ticks: {
                   display: true,

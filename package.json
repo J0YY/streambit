@@ -1,0 +1,24 @@
+{
+  "name": "Edu-stream",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "concurrently \"cd ./rtmp-server-livestream && node index.js\" \"cd ./json-database-livestream && npm i\" \"cd ./react-livestream/src && npm i\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J0YY/streambit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J0YY/streambit/issues"
+  },
+  "homepage": "https://github.com/J0YY/streambit#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
