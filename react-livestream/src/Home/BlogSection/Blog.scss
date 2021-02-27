@@ -1,0 +1,26 @@
+p {
+  // color: white;
+}
+
+.blog {
+  border: 1px solid #5ecaf9;
+  box-sizing: border-box;
+  border-radius: 0px 20px 20px 0px;
+  width: 35%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    padding-left: 1.5em;
+    width: 85%;
+    font-size: 1.6em;
+    line-height: 1.8em;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+  }
+}

@@ -1,0 +1,8 @@
+.head > h1{
+  color: black;
+}
+
+.head > p {
+  font-size: 32px;
+  color: black;
+}

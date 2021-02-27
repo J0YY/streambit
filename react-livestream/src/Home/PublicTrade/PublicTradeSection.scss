@@ -1,0 +1,24 @@
+.public-trade-section {
+  margin-top: 15em;
+
+  .section-title,
+  .section-desc {
+    text-align: center;
+  }
+}
+
+.public-trades-container {
+  margin: 0;
+  margin-top: 6em;
+  display: flex;
+  gap: 5em;
+  justify-content: center;
+  .inner-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    align-items: center;
+  }
+}

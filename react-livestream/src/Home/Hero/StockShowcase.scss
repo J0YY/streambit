@@ -1,0 +1,90 @@
+html {
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.stock-showcase {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.stock-showcase-element {
+  width: 63%;
+  padding: 0.6em 1.6em;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  align-items: center;
+
+  border-radius: 15px;
+  backdrop-filter: blur(60px);
+  background: white;
+  margin-top: 3em;
+  background: radial-gradient(
+    97.32% 296.18% at 2.68% 5.08%,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.showcase-price-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 1.875em;
+    }
+    margin-bottom: 0.6em;
+  }
+
+  .price-change-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 1em;
+    }
+  }
+}
+
+.showcase-stockinfo {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40% 50%;
+  grid-column-gap: 10%;
+  padding: 0.3em;
+
+  .stock-icon {
+    width: 2.8em;
+  }
+
+  .stock-info {
+    text-align: left;
+    .name {
+      font-size: 1.3em;
+      margin: 0;
+      margin-bottom: 0.3em;
+      color: #000000;
+    }
+    .ticker {
+      margin: 0;
+      font-size: 1.1em;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

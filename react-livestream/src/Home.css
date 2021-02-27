@@ -1,0 +1,60 @@
+header {
+  margin-top: 3.5em;
+  background: url('https://thumbs.gfycat.com/TidyMedicalAndalusianhorse-size_restricted.gif');
+  background-size: 110%;
+  height: 130vh;
+  background-position: center;
+  position: relative;
+}
+
+header div.head {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  padding-top: 12%;
+  align-items: center;
+}
+
+header div.head {
+  color: #222;
+}
+
+header div.head h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: none;
+  padding-top: 40px;
+  letter-spacing: 3px;
+}
+
+header div.head p {
+  padding-left: 30px;
+  border-left: 2px solid black;
+  margin-right: 5%;
+}
+
+.section-title {
+  font-size: 3.75em;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.section-desc {
+  margin-top: 2em;
+  text-align: left;
+  font-size: 2.1875em;
+  line-height: 1.8em;
+  color: black;
+}
+
+header div.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 82%;
+  margin: auto;
+}
