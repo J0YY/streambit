@@ -1,4 +1,4 @@
-#What IS StreamBit?
+# What IS StreamBit?
 
 StreamBit is a centralized education and support platform for mental health and self-care related livestreams. We were inspired by the current lack of interactive and compiled resources on mental health education for the general population, especially that of social resources because current live sharing communities often tend to be toxic and mentally taxing to remain a part of. With StreamBit, our platform comes with a whole set of services to facilitate user experience, including live streaming capability and group support anonymous messaging as well to share the love and improve everyone's mental health!
 
