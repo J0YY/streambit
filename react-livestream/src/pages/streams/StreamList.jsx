@@ -3,6 +3,8 @@ import AppWraper from '../../components/AppWraper';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStreams, deleteStream } from '../../actions';
 import Nav from "../../Home/Hero/nav";
+import { Fade, Slide, Zoom } from "react-reveal";
+import "./StreamList.css";
 
 import {
   Container,
@@ -85,35 +87,39 @@ const StreamList = () => {
               </Typography>
             </div>
             <CardContent>
-              <Typography variant="h6">{stream.title}</Typography>
-              <Typography component="p">{stream.description}</Typography>
-              <div style={{ position: 'absolute', bottom: 5 }}>
-                <Link
-                  to={`/stream/watch/${stream.id}`}
-                  style={{ textDecoration: 'none' }}>
-                  <Button
-                    variant="contained"
-                    style={{
-                      backgroundColor: 'rgb(5, 31, 66)',
-                      color: '#fff',
-                      marginRight: 10,
-                    }}>
-                    Watch Stream
+              <Fade bottom duration={1000}>
+                <Typography variant="h6">{stream.title}</Typography>
+                <Typography component="p">{stream.description}</Typography>
+                <div style={{ position: 'absolute', bottom: 5 }}>
+                  <Link
+                    to={`/stream/watch/${stream.id}`}
+                    style={{ textDecoration: 'none' }}>
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: 'rgb(5, 31, 66)',
+                        color: '#fff',
+                        marginRight: 10,
+                      }}>
+                      Watch Stream
                   </Button>
-                </Link>
-                {renderAuthUser(stream)}
-              </div>
+                  </Link>
+                  {renderAuthUser(stream)}
+                </div>
+              </Fade>
             </CardContent>
           </Paper>
         </Grid>
       );
+
     });
+
   };
 
   const renderButton = () => {
     {
       return (
-        <div style={{ textAlign: 'right' }}>
+        <div style={{ textAlign: 'right' }} >
           <Link
             to="/stream/new"
             style={{
@@ -131,25 +137,29 @@ const StreamList = () => {
   };
 
   return (
-    <AppWraper>
-      <Nav />
-      <Container style={{ marginTop: 70 }}>
-        <Grid
-          container
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-          style={{ marginBottom: 10 }}>
-          <Typography variant="h4" style={{ color: 'rgb(5, 31, 66)' }}>
-            Streamed Videos
-          </Typography>
-          {renderButton()}
-        </Grid>
-        <Grid container spacing={3} direction="row" alignItems="stretch">
-          {renderStreams()}
-        </Grid>
-      </Container>
-    </AppWraper>
+    <div className="sl">
+      <AppWraper>
+        <Nav />
+        <Container style={{ marginTop: 70 }}>
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="center"
+            style={{ marginBottom: 10 }}>
+            <Fade left duration={1500}>
+              <div className="font">
+                <h1>Top Streams, Live</h1>
+              </div>
+            </Fade>
+            {renderButton()}
+          </Grid>
+          <Grid container spacing={3} direction="row" alignItems="stretch">
+            {renderStreams()}
+          </Grid>
+        </Container>
+      </AppWraper>
+    </div >
   );
 };
 

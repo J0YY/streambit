@@ -5,6 +5,8 @@ import AppWraper from '../../components/AppWraper';
 import { Container } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { fetchSingleStream } from '../../actions';
+import Nav from "../../Home/Hero/nav"
+import "./StreamWatch.css";
 
 class StreamWatch extends Component {
   constructor(props) {
@@ -43,17 +45,20 @@ class StreamWatch extends Component {
     const { title, description } = this.props.stream;
 
     return (
-      <AppWraper>
-        <Container style={{ marginTop: 20 }}>
-          <video
-            ref={this.videoRef}
-            style={{ width: '100%' }}
-            controls={true}
-          />
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </Container>
-      </AppWraper>
+      <div className="sw">
+        <AppWraper>
+          <Nav />
+          <Container style={{ marginTop: 40 }}>
+            <video
+              ref={this.videoRef}
+              style={{ width: '100%' }}
+              controls={true}
+            />
+            <h3 style={{ fontFamily: "Arial", fontSize: "30px", color: "white" }}>{title}</h3>
+            <p>{description}</p>
+          </Container>
+        </AppWraper>
+      </div>
     );
   }
 }

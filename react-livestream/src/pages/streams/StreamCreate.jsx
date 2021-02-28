@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { createStream } from '../../actions';
 import StreamForm from '../../components/stream/StreamForm';
 import Nav from "../../Home/Hero/nav";
-
+import "./StreamCreate.css";
 
 const StreamCreate = props => {
   const dispatch = useDispatch();
@@ -16,12 +16,14 @@ const StreamCreate = props => {
   };
 
   return (
-    <AppWraper>
-      <Nav />
-      <Container style={{ marginTop: 50 }}>
-        <StreamForm onSubmit={onFormSubmit} />
-      </Container>
-    </AppWraper>
+    <div className="st">
+      <AppWraper>
+        <Nav />
+        <Container style={{ marginTop: 50 }}>
+          <StreamForm onSubmit={onFormSubmit} />
+        </Container>
+      </AppWraper>
+    </div>
   );
 };
 

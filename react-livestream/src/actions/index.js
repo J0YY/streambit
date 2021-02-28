@@ -34,8 +34,12 @@ export const createStream = formValues => async (dispatch, getState) => {
     userId: user.userId,
     user,
   });
-
   dispatch({ type: CREATE_STREAM, payload: response.data });
+  alert(
+    'Thank you, your  stream has been created! Your stream key is ' +
+      response.data.id +
+      ', to be used in OBS.'
+  );
   history.push('/streams');
 };
 

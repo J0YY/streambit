@@ -7,6 +7,7 @@ import StreamCreate from './pages/streams/StreamCreate';
 import StreameEdit from './pages/streams/StreamEdit';
 import StreamWatch from './pages/streams/StreamWatch';
 import Home from './Home';
+import Messaging from './Messaging';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/stream/edit/:id" component={StreameEdit} />
         <Route path="/stream/watch/:id" component={StreamWatch} />
+        <Route path="/messaging">
+          <Messaging />
+        </Route>
         <Route path="/">
           <Home />
         </Route>

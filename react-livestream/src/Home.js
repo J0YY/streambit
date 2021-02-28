@@ -9,6 +9,7 @@ import Hero from './Home/Hero/Hero';
 import BlogSection from './Home/BlogSection/BlogSection';
 import CallToAction from './Home/End-CTA/calltoaction';
 import Nav from './Home/Hero/nav';
+import { Fade, Slide, Zoom } from 'react-reveal';
 
 class Home extends Component {
   render() {
@@ -17,18 +18,20 @@ class Home extends Component {
         <header>
           <div className="top">
             <Nav />
-            <div className="head">
-              <h1 style={{ fontFamily: 'Arial', color: 'white' }}>
-                Welcome to
-                <br />
-                StreamBits
-              </h1>
-              <p style={{ fontFamily: 'Arial', color: 'darkslategray' }}>
-                the ultimate educational streaming platform for mental health
-                and self-care
-              </p>
-              {/* <p>the public portfolio investment platform to learn, share, and grow</p> */}
-            </div>
+            <Fade top duration={1500}>
+              <div className="head">
+                <h1 style={{ fontFamily: 'Arial', color: 'white' }}>
+                  Welcome to
+                  <br />
+                  StreamBits
+                </h1>
+                <p style={{ fontFamily: 'Arial', color: 'darkslategray' }}>
+                  the ultimate educational streaming platform for mental health
+                  and self-care
+                </p>
+                {/* <p>the public portfolio investment platform to learn, share, and grow</p> */}
+              </div>
+            </Fade>
             <div className="intro"></div>
           </div>
         </header>

@@ -29,18 +29,6 @@ class Nav extends Component {
                 color: 'black',
                 fontFamily: 'Arial',
               }}
-              to="/">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              add
-              style={{
-                textDecoration: 'none',
-                color: 'black',
-                fontFamily: 'Arial',
-              }}
               to="/streams">
               Watch
             </Link>
@@ -55,6 +43,18 @@ class Nav extends Component {
               }}
               to="/stream/new">
               Stream
+            </Link>
+          </li>
+          <li>
+            <Link
+              add
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+                fontFamily: 'Arial',
+              }}
+              to="/messaging">
+              Connect 🥺
             </Link>
           </li>
         </ul>

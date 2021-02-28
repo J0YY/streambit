@@ -1,0 +1,18 @@
+.sl {
+  background: url('https://cutewallpaper.org/21/wallpaper-gif-1920x1080/Gif-Background-Space-1920x1080-Backgrounds-For-Html-Gif-.gif');
+  background-size: 100%;
+  height: 150vh;
+}
+
+.font > h1 {
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 65px;
+  font-weight: normal;
+  line-height: 60px;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  margin: 10px 0 24px;
+  text-align: center;
+}
