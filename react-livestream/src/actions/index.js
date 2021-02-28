@@ -1,5 +1,6 @@
 import streams from '../api/streams';
 import history from '../history';
+import db from '../api/firebase';
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -34,7 +35,12 @@ export const createStream = formValues => async (dispatch, getState) => {
     userId: user.userId,
     user,
   });
-  dispatch({ type: CREATE_STREAM, payload: response.data });
+  db.collection('streams').add({
+    description: response.data.description,
+    id: response.data.id,
+    titles: response.data.title,
+  });
+
   alert(
     'Thank you, your  stream has been created! Your stream key is ' +
       response.data.id +
