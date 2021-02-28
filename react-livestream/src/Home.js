@@ -4,13 +4,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import Hero from './Home/Hero/Hero';
-<<<<<<< HEAD
-import PublicTradeSection from './Home/PublicTrade/PublicTradeSection';
-import TradeSection from './Home/Trade-Section/TradeSection';
-=======
 // import PublicTradeSection from './Home/PublicTrade/PublicTradeSection';
 // import TradeSection from './Home/Trade-Section/TradeSection';
->>>>>>> branch2
 import BlogSection from './Home/BlogSection/BlogSection';
 import CallToAction from './Home/End-CTA/calltoaction';
 import Nav from './Home/Hero/nav';
@@ -20,27 +15,6 @@ class Home extends Component {
     return (
       <div className="home">
         <header>
-<<<<<<< HEAD
-          {/* <Nav /> */}
-          <div className="head">
-            <h1>
-              Welcome to
-              <br />
-              StreamBits
-            </h1>
-            <p>
-              the ultimate educational streaming platform for mental health and
-              self-care
-            </p>
-            {/* <p>the public portfolio investment platform to learn, share, and grow</p> */}
-          </div>
-          <div className="intro"></div>
-        </header>
-
-        <Hero />
-        <TradeSection />
-        <PublicTradeSection />
-=======
           <div className="top">
             <Nav />
             <div className="head">
@@ -58,7 +32,6 @@ class Home extends Component {
             <div className="intro"></div>
           </div>
         </header>
->>>>>>> branch2
         <BlogSection />
         <CallToAction />
       </div>
