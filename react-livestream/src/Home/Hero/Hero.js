@@ -9,7 +9,11 @@ class Hero extends Component {
     return (
       <header>
         <div className="head">
+<<<<<<< HEAD
           <h1>
+=======
+          <h1 style={{ fontFamily: 'Arial' }}>
+>>>>>>> branch2
             Welcome to
             <br />
             TradeHub

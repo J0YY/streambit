@@ -1,8 +1,8 @@
-header {
+.top {
   margin-top: 3.5em;
-  background: url('https://thumbs.gfycat.com/TidyMedicalAndalusianhorse-size_restricted.gif');
-  background-size: 110%;
-  height: 130vh;
+  background: url('https://static01.nyt.com/images/2018/10/30/well/mindstill/mindstill-jumbo-v3.gif');
+  background-size: 80%;
+  height: 100vh;
   background-position: center;
   position: relative;
 }
@@ -25,15 +25,24 @@ header div.head {
 header div.head h1 {
   font-size: 4rem;
   font-weight: bold;
-  text-transform: none;
+  text-transform: uppercase;
   padding-top: 40px;
   letter-spacing: 3px;
+  color: white;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+    3px 3px 0 #000;
 }
 
 header div.head p {
   padding-left: 30px;
-  border-left: 2px solid black;
+  border-left: 2px solid lightgray;
   margin-right: 5%;
+  color: lightgray;
+  /* text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000; */
 }
 
 .section-title {
