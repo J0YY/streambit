@@ -5,6 +5,8 @@ import { Container } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { createStream } from '../../actions';
 import StreamForm from '../../components/stream/StreamForm';
+import Nav from "../../Home/Hero/nav";
+
 
 const StreamCreate = props => {
   const dispatch = useDispatch();
@@ -15,6 +17,7 @@ const StreamCreate = props => {
 
   return (
     <AppWraper>
+      <Nav />
       <Container style={{ marginTop: 50 }}>
         <StreamForm onSubmit={onFormSubmit} />
       </Container>

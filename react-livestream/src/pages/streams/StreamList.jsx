@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import AppWraper from '../../components/AppWraper';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStreams, deleteStream } from '../../actions';
+import Nav from "../../Home/Hero/nav";
+
 import {
   Container,
   Paper,
@@ -109,7 +111,7 @@ const StreamList = () => {
   };
 
   const renderButton = () => {
-    if (isAuth) {
+    {
       return (
         <div style={{ textAlign: 'right' }}>
           <Link
@@ -130,6 +132,7 @@ const StreamList = () => {
 
   return (
     <AppWraper>
+      <Nav />
       <Container style={{ marginTop: 70 }}>
         <Grid
           container
