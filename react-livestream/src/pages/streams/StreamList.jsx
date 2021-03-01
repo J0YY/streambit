@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppWraper from '../../components/AppWraper';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStreams, deleteStream } from '../../actions';
 import Nav from "../../Home/Hero/nav";
 import { Fade, Slide, Zoom } from "react-reveal";
 import "./StreamList.css";
+import ffmpeg from "ffmpeg";
+import streams from '../../api/streams';
+
 
 import {
   Container,
@@ -64,6 +67,7 @@ const StreamList = () => {
 
   const renderStreams = () => {
     return streams.map(stream => {
+
       return (
         <Grid
           item
@@ -88,6 +92,7 @@ const StreamList = () => {
             </div>
             <CardContent>
               <Fade bottom duration={1000}>
+                <RenderThumbnail streamID={stream.id} />
                 <Typography variant="h6">{stream.title}</Typography>
                 <Typography component="p">{stream.description}</Typography>
                 <div style={{ position: 'absolute', bottom: 5 }}>
@@ -112,10 +117,9 @@ const StreamList = () => {
         </Grid>
       );
 
-    });
+      })
 
   };
-
   const renderButton = () => {
     {
       return (
@@ -162,5 +166,26 @@ const StreamList = () => {
     </div >
   );
 };
+
+function RenderThumbnail({streamID}) {
+    let [thumbnail, setThumbnail] = useState(null);
+    useEffect( () => {
+      streams.get("/screenshot", {
+        params: {
+          streamID
+        }
+      }).then(res => {
+        console.log(res);
+        let url = res.data;
+        return setThumbnail(url)
+      }).catch(err => console.log(err))
+    }, [])
+  
+  
+  return (
+    (thumbnail != null) && <img src={`${thumbnail}`} />
+    )
+  }
+
 
 export default StreamList;
